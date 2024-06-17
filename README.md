@@ -25,38 +25,38 @@
 
 4)Project Structure:
 
-StudentsManagementSystem
-├── src
-│   ├── main
-│   │   └── java/com/StudentsManagementSystem
-│   │       ├── controller
-│   │       │   └── Controller.java
-│   │       ├── entity
-│   │       │   └── Student.java
-│   │       ├── repository
-│   │       │   └── StudentRepository.java
-│   │       ├── service
-│   │       │   └── StudentService.java
-│   │       ├── serviceImpl
-│   │       │   └── ServiceImpl.java
-│   │       └── StudentsManagementSystemApplication.java
-│   ├── resources
-│   │   ├── static
-│   │   │   └── 51590.jpg
-│   │   ├── templates
-│   │   │   ├── create-student.html
-│   │   │   ├── edit_student.html
-│   │   │   ├── home.html
-│   │   │   └── students.html
-│   │   └── application.properties
-│   └── test
-│       └── java/com/StudentsManagementSystem
-│           └── StudentsManagementSystemApplicationTests.java
-├── target
-├── HELP.md
-├── mvnw
-├── mvnw.cmd
-└── pom.xml
+        StudentsManagementSystem
+        ├── src
+        │   ├── main
+        │   │   └── java/com/StudentsManagementSystem
+        │   │       ├── controller
+        │   │       │   └── Controller.java
+        │   │       ├── entity
+        │   │       │   └── Student.java
+        │   │       ├── repository
+        │   │       │   └── StudentRepository.java
+        │   │       ├── service
+        │   │       │   └── StudentService.java
+        │   │       ├── serviceImpl
+        │   │       │   └── ServiceImpl.java
+        │   │       └── StudentsManagementSystemApplication.java
+        │   ├── resources
+        │   │   ├── static
+        │   │   │   └── 51590.jpg
+        │   │   ├── templates
+        │   │   │   ├── create-student.html
+        │   │   │   ├── edit_student.html
+        │   │   │   ├── home.html
+        │   │   │   └── students.html
+        │   │   └── application.properties
+        │   └── test
+        │       └── java/com/StudentsManagementSystem
+        │           └── StudentsManagementSystemApplicationTests.java
+        ├── target
+        ├── HELP.md
+        ├── mvnw
+        ├── mvnw.cmd
+        └── pom.xml
 
 
 Thank you for checking out the Student Management System! Your support and contributions are greatly appreciated.

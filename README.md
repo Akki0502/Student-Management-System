@@ -15,13 +15,14 @@
 
     Java: Core programming language used for development
     Spring Boot: Framework for building the application
+    MVC Architecture: Model-View-Controller design pattern
     Thymeleaf: Template engine for rendering HTML pages
     Maven: Build and dependency management tool
     MySQL: Database for storing student data
     HTML/CSS: Front-end technologies for designing web pages
     JavaScript: Enhances interactivity on web pages
     Bootstrap: Front-end framework for responsive design
-    MVC Architecture: Model-View-Controller design pattern
+    
 
 4)Project Structure:
 

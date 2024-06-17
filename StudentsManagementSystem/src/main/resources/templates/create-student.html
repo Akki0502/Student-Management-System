@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Students</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+    
+    
+        .navbar-brand img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px; /* Adjust top margin as needed */
+        }
+        .btn-group .btn {
+            flex: 1; /* Allow buttons to share space */
+            margin-right: 10px; /* Add margin between buttons */
+            opacity: 0; /* Start with opacity 0 */
+            animation: fadeInUp 0.5s forwards; /* Animation for appearing */
+        }
+        .btn-group .btn:first-child {
+            animation-delay: 0.5s; /* Delay for the first button */
+        }
+        .btn-group .btn:last-child {
+            animation-delay: 1s; /* Delay for the second button */
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Start slightly below */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Move to normal position */
+            }
+        }
+        
+         body {
+            background-color: #FFFFFF;
+			background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #0033ff 100%);
+            
+            /* Adjust gradient colors as needed */
+            background-size: cover;
+            /* Cover the entire viewport */
+            background-attachment: fixed;
+            /* Fixed background */
+            height: 100%;
+            /* Full height of viewport */
+            overflow-x: hidden;
+            /* Hide horizontal scrollbar */
+        }
+    </style>
+</head>
+<body class="animate__animated animate__fadeIn">
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">
+        <img src="https://img.freepik.com/free-vector/education-easy-learning-set-icons_24877-51590.jpg?w=740&t=st=1718618303~exp=1718618903~hmac=00606b867ea313dca9d10a6f373a40397c597a3b12daea75e7d1a2bf664a0b58" alt="Logo">
+        Student Management System
+    </a>
+    <!-- Toggler / collapsible Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" th:href="@{/students}">Student Management</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container d-flex justify-content-center mt-5">
+    <div class="col-12 col-md-6 animate__animated animate__fadeInUp"> <!-- Makes the form responsive and adds animation -->
+        <h1 class="text-center">Student Registration Form</h1>
+        <form th:action="@{/students}" th:object="${student}" method="post">
+            <div class="form-group">
+                <label for="inputFirstName">First Name</label>
+                <input type="text" name="firstName" class="form-control animate__animated animate__fadeIn" id="inputFirstName" placeholder="Enter First Name" required>
+            </div>
+            <div class="form-group">
+                <label for="inputLastName">Last Name</label>
+                <input type="text" name="lastName" class="form-control animate__animated animate__fadeIn" id="inputLastName" placeholder="Enter Last Name" required>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">Email address</label>
+                <input type="email" name="email" class="form-control animate__animated animate__fadeIn" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-check animate__animated animate__fadeIn">
+                <input type="checkbox" class="form-check-input" id="confirmCheck" required>
+                <label class="form-check-label" for="confirmCheck">Confirm All The Details</label>
+            </div>
+            <div class="btn-group">
+                <button type="submit" class="btn btn-primary animate__animated animate__fadeIn" style="animation-delay: 1.5s;">Submit</button>
+                <a href="#" class="btn btn-secondary animate__animated animate__fadeIn" style="animation-delay: 2s;" onclick="history.back();">Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
